@@ -105,6 +105,13 @@ fun CustomProfileCard(
                 cardBgColorRes = R.color.card_blue,
                 alamatColorRes = R.color.white
             )
+            CustomProfileCard(
+                namaRes = R.string.nama_alfianal,
+                phoneRes = R.string.no_hp,
+                alamatRes = R.string.alamat_gamping,
+                cardBgColorRes = R.color.card_green,
+                alamatColorRes = R.color.white
+            )
         }
     }
 }
