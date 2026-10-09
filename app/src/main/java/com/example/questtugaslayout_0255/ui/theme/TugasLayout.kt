@@ -112,3 +112,82 @@ fun TampilanUtamaPreview() {
         TampilanUtama()
     }
 }
+
+@Composable
+fun CustomProfileCard(
+    @StringRes namaRes: Int,
+    @StringRes alamatRes: Int,
+    @ColorRes cardBgColorRes: Int,
+    @ColorRes alamatColorRes: Int,
+    modifier: Modifier = Modifier,
+    @StringRes phoneRes: Int? = null,
+    fontFamily: FontFamily = FontFamily.Default,
+    fontWeight: FontWeight = FontWeight.Bold
+) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 6.dp),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(id = cardBgColorRes)
+        )
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 14.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = stringResource(
+                    id = R.string.desc_logo_umy
+                ),
+                modifier = Modifier.size(62.dp)
+            )
+
+            Spacer(modifier = Modifier.width(14.dp))
+
+            Column(
+                modifier = Modifier.weight(1f)
+            ) {
+                Text(
+                    text = stringResource(id = namaRes),
+                    fontSize = if (fontFamily == FontFamily.Cursive) {
+                        22.sp
+                    } else {
+                        18.sp
+                    },
+                    fontFamily = fontFamily,
+                    fontWeight = fontWeight,
+                    color = colorResource(id = R.color.white)
+                )
+
+                if (phoneRes != null) {
+                    Text(
+                        text = stringResource(id = phoneRes),
+                        fontSize = 13.sp,
+                        color = colorResource(id = R.color.text_cyan)
+                    )
+                }
+
+                Text(
+                    text = stringResource(id = alamatRes),
+                    fontSize = 13.sp,
+                    color = colorResource(id = alamatColorRes)
+                )
+            }
+
+            Spacer(modifier = Modifier.width(14.dp))
+
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = stringResource(
+                    id = R.string.desc_logo_umy
+                ),
+                modifier = Modifier.size(62.dp)
+            )
+        }
+    }
+}
