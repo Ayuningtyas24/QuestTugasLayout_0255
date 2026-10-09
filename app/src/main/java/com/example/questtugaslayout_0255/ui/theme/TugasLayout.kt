@@ -98,6 +98,13 @@ fun CustomProfileCard(
                 cardBgColorRes = R.color.card_purple,
                 alamatColorRes = R.color.text_yellow
             )
+            CustomProfileCard(
+                namaRes = R.string.nama_zhilal,
+                phoneRes = R.string.no_hp,
+                alamatRes = R.string.alamat_depok,
+                cardBgColorRes = R.color.card_blue,
+                alamatColorRes = R.color.white
+            )
         }
     }
 }
