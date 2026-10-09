@@ -15,4 +15,8 @@
     <string name="nama_zhilal">Zhilal Fadhilah</string>
     <string name="no_zhilal">085767328498</string>
     <string name="alamat_depok">Depok, Sleman</string>
+
+    <string name="nama_ahmad">Ahmad Alfian</string>
+    <string name="no_alfian">08576732966</string>
+    <string name="alamat_gamping">Gamping, Sleman</string>
 </resources>
