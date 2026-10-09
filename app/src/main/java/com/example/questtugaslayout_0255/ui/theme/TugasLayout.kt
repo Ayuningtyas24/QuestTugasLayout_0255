@@ -1,28 +1,24 @@
 package com.example.questtugaslayout_0255.ui.theme
 
-import androidx.annotation.ColorRes
-import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+import com.example.questtugaslayout_0255.R
 
 @Composable
 fun TampilanUtama(modifier: Modifier = Modifier) {
@@ -44,53 +40,27 @@ fun TampilanUtama(modifier: Modifier = Modifier) {
                 fontWeight = FontWeight.Bold,
                 color = colorResource(id = R.color.black)
             )
+
             Spacer(modifier = Modifier.height(4.dp))
+
             Text(
                 text = stringResource(id = R.string.title_univ),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Bold,
                 color = colorResource(id = R.color.black)
             )
+
             Spacer(modifier = Modifier.height(20.dp))
-        }
-    }
-}
 
-
-@Composable
-fun CustomProfileCard(
-    @StringRes namaRes: Int,
-    @StringRes alamatRes: Int,
-    @ColorRes cardBgColorRes: Int,
-    @ColorRes alamatColorRes: Int,
-    modifier: Modifier = Modifier,
-    @StringRes phoneRes: Int? = null
-) {
-    Card(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 6.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = colorResource(id = cardBgColorRes)
-        )
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Text(
-                text = stringResource(id = namaRes),
-                color = colorResource(id = R.color.white)
-            )
-            Text(
-                text = stringResource(id = alamatRes),
-                color = colorResource(id = alamatColorRes)
-            )
             CustomProfileCard(
                 namaRes = R.string.nama_ayuningtyas,
                 alamatRes = R.string.alamat_turi,
                 cardBgColorRes = R.color.card_grey,
-                alamatColorRes = R.color.text_yellow
+                alamatColorRes = R.color.text_yellow,
+                fontFamily = FontFamily.Cursive,
+                fontWeight = FontWeight.Normal
             )
+
             CustomProfileCard(
                 namaRes = R.string.nama_gibran,
                 phoneRes = R.string.no_hp,
@@ -98,20 +68,23 @@ fun CustomProfileCard(
                 cardBgColorRes = R.color.card_purple,
                 alamatColorRes = R.color.text_yellow
             )
+
             CustomProfileCard(
                 namaRes = R.string.nama_zhilal,
-                phoneRes = R.string.no_hp,
+                phoneRes = R.string.no_zhilal,
                 alamatRes = R.string.alamat_depok,
                 cardBgColorRes = R.color.card_blue,
                 alamatColorRes = R.color.white
             )
+
             CustomProfileCard(
-                namaRes = R.string.nama_alfianal,
-                phoneRes = R.string.no_hp,
+                namaRes = R.string.nama_ahmad,
+                phoneRes = R.string.no_alfian,
                 alamatRes = R.string.alamat_gamping,
                 cardBgColorRes = R.color.card_green,
                 alamatColorRes = R.color.white
             )
         }
+
     }
 }
