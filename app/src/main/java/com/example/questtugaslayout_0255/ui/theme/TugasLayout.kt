@@ -85,6 +85,12 @@ fun CustomProfileCard(
                 text = stringResource(id = alamatRes),
                 color = colorResource(id = alamatColorRes)
             )
+            CustomProfileCard(
+                namaRes = R.string.nama_ayuningtyas,
+                alamatRes = R.string.alamat_turi,
+                cardBgColorRes = R.color.card_grey,
+                alamatColorRes = R.color.text_yellow
+            )
         }
     }
 }
