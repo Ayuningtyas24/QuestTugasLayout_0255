@@ -109,7 +109,9 @@ fun TampilanUtama(modifier: Modifier = Modifier) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TampilanUtamaPreview() {
-    TampilanUtama()
+    QuestTugasLayout_0255Theme {
+        TampilanUtama()
+    }
 }
 
 @Composable
