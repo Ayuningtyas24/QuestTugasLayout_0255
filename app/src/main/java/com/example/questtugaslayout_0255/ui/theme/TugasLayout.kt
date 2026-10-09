@@ -84,7 +84,12 @@ fun TampilanUtama(modifier: Modifier = Modifier) {
                 cardBgColorRes = R.color.card_green,
                 alamatColorRes = R.color.white
             )
+            Text(
+                text = stringResource(id = R.string.text_copyright),
+                fontSize = 12.sp,
+                color = colorResource(id = R.color.black),
+                modifier = Modifier.align(alignment = Alignment.BottomCenter)
+            )
         }
-
     }
 }
